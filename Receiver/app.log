@@ -1,0 +1,19 @@
+RECEIVER :: DEBUG – Received response with trace id: fe5e7847-50a9-473a-97cb-fcd9341a1044, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: a2416215-6e8c-4e33-b18e-99d719e4ea62, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: e1dd9f3a-8de3-49b5-97a4-873984f983f1, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: 320d3466-2427-4618-baa8-e7fe8b1afe16, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: 2d649136-a168-4eff-a123-c703399f9e16, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: 1a7390a6-77d8-4936-8891-ef85a461ba8b, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: 746234ea-a35e-4cd4-9f81-6215fdcb4fbc, status code: 201
+RECEIVER :: DEBUG – Received response with trace id: 00458d2a-7e43-4555-92b5-542db8997507, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: ae2fd4d4-2f8d-485b-8da9-d7eaaf1e35ad, status code: 500
+RECEIVER :: DEBUG – Received response with trace id: 2905f4b3-4681-4fdb-9624-06f5ead6fc3f, status code: 201
+RECEIVER :: DEBUG – Received buy event with trace id 4475d522-5ac0-4b78-a444-5fdc550639ac
+RECEIVER :: DEBUG – PRODUCER::producing x buy
+RECEIVER :: DEBUG – {"type": "buy", "datetime": "2023-02-23T09:33:29Z", "payload": {"buy_id": "d290f1ee-6c54-4b01-90e6-d701748f0851", "buy_qty": 1, "item_name": "Item 1", "item_price": 19.99, "trace_id": "4475d522-5ac0-4b78-a444-5fdc550639ac"}}
+RECEIVER :: DEBUG – Received sell event with trace id 52be75c0-036b-4b46-bf19-cf4dcecb72dd
+RECEIVER :: DEBUG – PRODUCER::producing x sell
+RECEIVER :: DEBUG – {"type": "sell", "datetime": "2023-02-23T10:00:13Z", "payload": {"item_name": "Item 1", "item_price": 19.99, "sell_id": "d290f1ee-6c54-4b01-90e6-d701748f0851", "sell_qty": 1, "trace_id": "52be75c0-036b-4b46-bf19-cf4dcecb72dd"}}
+RECEIVER :: DEBUG – Received sell event with trace id f80d1c12-4b77-47e6-a9a1-5fe2308f88f8
+RECEIVER :: DEBUG – PRODUCER::producing x sell
+RECEIVER :: DEBUG – {"type": "sell", "datetime": "2023-02-23T10:04:08Z", "payload": {"item_name": "Item 1", "item_price": 19.99, "sell_id": "d290f1ee-6c54-4b01-90e6-d701748f0851", "sell_qty": 1, "trace_id": "f80d1c12-4b77-47e6-a9a1-5fe2308f88f8"}}

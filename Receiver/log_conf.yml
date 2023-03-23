@@ -1,0 +1,25 @@
+version: 1
+formatters: #Logger class where you specify the format of the output
+  c:
+    format: "\x1b[1;32;20mRECEIVER :: DEBUG \x1b[0m%(message)s"
+  f: 
+    format: "RECEIVER :: DEBUG – %(message)s" # format of the log message
+handlers: # sned the LogRecord to the required output destination. Handler is a base for subclasses like StreamHandler
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: c
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: f
+    filename: app.log # specifies the file
+loggers: # this is the class whose objects will be used in the application code directly to call the functions
+  basic:
+    level: DEBUG  #level is the root logger will be set to the specified severity level
+    handlers: [console, file] 
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]
