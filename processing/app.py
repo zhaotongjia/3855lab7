@@ -83,7 +83,7 @@ def populate_stats():
 
     # TODO call the /buy GET endpoint of storage, passing last_updated
     # TODO convert result to a json object, loop through and calculate max_buy_price of all recent records
-    events = requests.get(f'http://172.30.0.3:8090/buy?timestamp={last_updated}')
+    events = requests.get(f'http://172.30.0.3/storage/buy?timestamp={last_updated}')
 
     event = events.json()
     for e in event:
@@ -92,7 +92,7 @@ def populate_stats():
             data["max_buy_price"] = e["item_price"]
 
 
-    events = requests.get(f'http://172.30.0.3:8090/sell?timestamp={last_updated}')
+    events = requests.get(f'http://172.30.0.3/storage/sell?timestamp={last_updated}')
 
     event = events.json()
     for e in event:
