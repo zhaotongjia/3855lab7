@@ -62,9 +62,29 @@ services:
       appnetwork:
         ipv4_address: 172.30.0.6
 
+  mysql:
+    build:
+      context: ./mysql
+    image: mysql-image
+    container_name: mysql-container
+    ports:
+      - 3306:3306
+    networks:
+      appnetwork:
+        ipv4_address: 172.30.0.11
+    volumes:
+      - joy-mysql-file:/var/lib/mysql
+
 networks:
   appnetwork:
-    external: true
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
+
+volumes:
+  joy-mysql-file:
 
 
 
