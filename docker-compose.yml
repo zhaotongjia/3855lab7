@@ -78,3 +78,7 @@ services:
 networks:
   appnetwork:
     external: true
+ 
+volumes:
+  joy-mysql-file:
+
